@@ -1659,9 +1659,9 @@ from notebook.conf import get_ordered_interpreters
           <li>The query would run 2x faster by adding a WHERE date_f > '2017-01-01'</li>
           <li>Parameterize the query?</li>
           <li>Could be automated with integrated scheduler</li>
-          <li>Data has not been refreshed since last run 3 days ago  <i class="fa fa-warning"></i> <i class="fa fa-refresh"></i></li></li>
+          <li>Data has not been refreshed since last run 3 days ago</li>
           <li>A schema change happened last week, a new column 'salary_med' was added</li>
-          <li>Data statistics are not accurate, click to refresh them</li>
+          <li>Data statistics are not accurate <i class="fa fa-warning"></i> <i class="fa fa-refresh"></i></li>
           <li>Query ran 17 times last week</li>
           <li>The datasets are sometimes joined with table [Population]</li>
           <li>Query would be a good candidate to run interactively with Impala</li>

@@ -92,11 +92,11 @@ ${ hueIcons.symbols() }
   <div class="top-nav">
     <div class="top-nav-left">
       <a class="hamburger hamburger-hue pull-left" type="button" data-bind="toggle: leftNavVisible, css: { 'is-active': leftNavVisible }">
-      <span class="hamburger-box">
+      <span class="hamburger-box" title="${_('Menu')}" >
         <span class="hamburger-inner"></span>
       </span>
       </a>
-      <a class="nav-tooltip pull-left" title="${_('Homepage')}" rel="navigator-tooltip"  href="#" data-bind="click: function(){ onePageViewModel.currentApp('home') }">
+      <a class="nav-tooltip pull-left" title="${_('Homepage')}" rel="navigator-tooltip" href="#" data-bind="click: function(){ onePageViewModel.currentApp('home') }">
         <svg style="margin-top:12px;margin-left:8px;height: 24px;width:120px;display: inline-block;">
           <use xlink:href="#hue-logo"></use>
         </svg>
@@ -200,8 +200,10 @@ ${ hueIcons.symbols() }
             <ul class="dropdown-menu" >
               <li><a href="${ url('useradmin.views.list_users') }"><i class="fa fa-group"></i> ${_('Manage Users')}</a></li>
               <li><a href="${ url('useradmin.views.list_permissions') }"><i class="fa fa-key"></i> ${_('Set Permissions')}</a></li>
-              <li><a href="/about"><span class="dropdown-no-icon">${_('Help')}</span></a></li>
+              <li><a href="http://gethue.com"><span class="dropdown-no-icon">${_('Help')}</span></a></li>
+              % if user.is_superuser:
               <li><a href="/about"><span class="dropdown-no-icon">${_('About Hue')}</span></a></li>
+              % endif
               <li class="divider"></li>
               <li><a title="${_('Sign out')}" href="/accounts/logout/"><i class="fa fa-sign-out"></i> ${ _('Sign out') }</a></li>
             </ul>
